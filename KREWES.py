@@ -10,7 +10,10 @@ KREWES = {
         'Big Mo', 'Peihua', 'Saad', 'Benjamin', 'Justin', 'Alice', 'Hilary',
         'Ayham', 'Micheal', 'Matthew', 'Jionghao', 'Devin', 'David', 'Jacob',
         'Will', 'Hannah', 'Alex'],
-            'endymion': []
+            'endymion': ['Grace', 'Nahi', 'Derek', 'Jun Tao', 'Connor',
+        'Jason', 'Tammy', 'Albert', 'Kazi', 'Derek', 'Brandon', 'Kenneth',
+        'Lauren', 'Biraj', 'Jeff', 'Jackson', 'Taejoon', 'Kevin', 'Jude',
+        'Sophie', 'Henry', 'Coby', 'Manfred', 'Leia', 'Ahmed', 'Winston']
         }
 
 team = input("What team? ")
