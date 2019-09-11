@@ -6,7 +6,10 @@ KREWES = {
         'Ivan', 'Elizabeth', 'Pratham', 'Shaw', 'Eric', 'Yaru',
         'Kelvin', 'Hong Wei', 'Michael', 'Kiran', 'Amanda', 'Joseph',
         'Tanzim', 'David', 'Yevgeniy'],
-            'rex': [],
+            'rex': ['William', 'Joseph', 'Calvin', 'Ethan', 'Moody', 'Mo',
+        'Big Mo', 'Peihua', 'Saad', 'Benjamin', 'Justin', 'Alice', 'Hilary',
+        'Ayham', 'Micheal', 'Matthew', 'Jionghao', 'Devin', 'David', 'Jacob',
+        'Will', 'Hannah', 'Alex'],
             'endymion': []
         }
 
