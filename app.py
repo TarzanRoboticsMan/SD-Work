@@ -7,13 +7,8 @@ def hello_word():
     print(__name__) #where will this go?
     return "We love the 19th"
 
-coll = [0,1,1,2,3,5,8]
-@app.route("/my_foist_template")
-def test_templ():
-    print(__name__)
-    return render_template('seed.html',
-                    foo="Mr. Mylky",
-                    collection=coll)
+@app.route("occupyflaskst")
+def 
 
 if __name__ == "__main__":
     app.debug = True
