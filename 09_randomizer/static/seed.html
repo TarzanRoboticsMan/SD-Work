@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<input title="foo">
+<input collection="collection">
+<html>
+  <head>
+    <title>
+      {{ foo }}
+    </title>
+  </head>
+  <body>
+    {% for item in collection %}
+      {{ item }}
+      <br>
+    {% endfor %}
+  </body>
+</html>
