@@ -1,16 +1,22 @@
-from flask import Flask, render_template, random
+from flask import Flask, render_template
+import random
 
-fn = 'occupations.csv'
+fn = '190913f_data/occupations.csv'
 fileR = open(fn, 'r')
 
 jobs = fileR.readlines()
 occupations = dict()
+x=0
 
 for job in jobs:
     words = job.split(',')
     percentage = words.pop(len(words) - 1)
     #delimiter = ','
-    occupations[','.join(words)] = float(percentage)
+    if x>0:
+        occupations[','.join(words)] = float(percentage)
+    else:
+        occupations[','.join(words)] = percentage
+    x=x+1
 
 def randomJob(dictOfJobs):
     perct = dictOfJobs['Total'] * 100
@@ -22,7 +28,7 @@ def randomJob(dictOfJobs):
         x = x + 1
     return keys[x]
 
-print(randomJob(occupations))
+#print(randomJob(occupations))
 
 
 app = Flask(__name__) #create instance of class Flask
@@ -37,6 +43,7 @@ def protest():
 
     return render_template('model_templt.html',
                             titl="Occupation List",
+                            collection=occupations,
                             head="Returns random occupation from the table below\nMr. Mylky\nCoby Sontag,Ethan Chen")
 if __name__ == "__main__":
     app.debug = True
