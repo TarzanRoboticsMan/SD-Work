@@ -8,10 +8,11 @@
   </head>
   <body>
     <table>
-      <tr>
-        {% for item in collection %}
-          {{ item }}
-        {% endfor %}
+        {% for key, value in dict_item.items() %}
+        <tr>
+        <h1>Key: {{key}}</h1>
+      <h2>Value: {{value}}</h2>
+   {% endfor %}
       </tr>
     </table>
   </body>
