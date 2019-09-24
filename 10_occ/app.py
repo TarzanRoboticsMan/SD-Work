@@ -43,7 +43,7 @@ def protest():
     return render_template('model_templt.html',
                             titl="Occupation List",
                             collection=occupations,
-                            head="Returns random occupation from the table below\nMr. Mylky\nCoby Sontag,Ethan Chen")
+                            head="Returns random occupation from the table below")
 if __name__ == "__main__":
     app.debug = True
     app.run()
