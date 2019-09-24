@@ -8,12 +8,16 @@
   </head>
   <body>
     <table>
-        {% for key, value in dict_item.items() %}
+        {% for key in collection.items() %}
         <tr>
-        <h1>Key: {{key}}</h1>
-      <h2>Value: {{value}}</h2>
-   {% endfor %}
-      </tr>
+		<td>
+			<h1>{{key}}</h1>
+		</td>
+		<td>
+      <h2>{{ dictionary[key] }}</h2>
+	  </td>
+	</tr>
+   	{% endfor %}
     </table>
   </body>
 </html>
