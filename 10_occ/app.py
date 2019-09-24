@@ -40,7 +40,6 @@ def hello_word():
 
 @app.route("/occupyflaskst")
 def protest():
-
     return render_template('model_templt.html',
                             titl="Occupation List",
                             collection=occupations,
