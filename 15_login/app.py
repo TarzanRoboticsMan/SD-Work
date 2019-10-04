@@ -12,20 +12,21 @@ teamMembers = "Saad Bhuiyan and Coby Sontag"
 @app.route("/")
 def root():
     if ('t' in session):
-        redirect(url_for(welcome))
         print("Redirected to /welcome from /")
+        return redirect(url_for("welcome"))
     else:
-        (redirect(url_for(login)))
-
-error = ""
+        return redirect(url_for("login"))
 
 @app.route("/login")
 def login():
+    error = ""
     if len(request.args) > 0:
         if request.form["username"] == myUsername and request.form["password"] == myPassword:
-            redirect(url_for(welcome))
+            session['logged?'] = 't'
             print("Redirected to /welcome from /login")
-        error = "Wrong username or password"
+            return redirect(url_for("welcome"))
+        else:
+            error = "Wrong username or password"
 
     return render_template("login.html",
                             teamName = teamName,
@@ -38,7 +39,7 @@ myPassword = "fishy"
 
 @app.route("/welcome")
 def welcome():
-    render_template("welcome.html",
+    return render_template("welcome.html",
                     username = myUsername)
 
 
@@ -46,7 +47,7 @@ def welcome():
 def authenticate():
     if request.form["username"] == myUsername and request.form["password"] == myPassword:
         session['logged?'] = 't'
-        render_template("welcome.html",
+        return render_template("welcome.html",
                         username = myUsername)
     else:
         return render_template("response.html",
