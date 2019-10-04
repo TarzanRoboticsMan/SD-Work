@@ -20,7 +20,8 @@ def root():
 @app.route("/login")
 def login():
     error = ""
-    if len(request.args) > 0:
+    print(request.form)
+    if len(request.form) > 0:
         if request.form["username"] == myUsername and request.form["password"] == myPassword:
             session['logged?'] = 't'
             print("Redirected to /welcome from /login")
