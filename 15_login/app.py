@@ -3,7 +3,7 @@
 #K15 -- Using Python, Flask, Jinja2, and HTML to create a form and custom response.
 #2019-10-02
 
-from flask import Flask, render_template, request, session, redirect
+from flask import Flask, render_template, request, session, redirect, url_for
 app = Flask(__name__)
 
 teamName = "Team Cod"
@@ -11,18 +11,18 @@ teamMembers = "Saad Bhuiyan and Coby Sontag"
 
 @app.route("/")
 def root():
-    if session['logged?'] == 't'
+    if ('t' in session):
         redirect(url_for(welcome))
         print("Redirected to /welcome from /")
-    else
+    else:
         (redirect(url_for(login)))
 
 error = ""
 
 @app.route("/login")
 def login():
-    if len(request.args) > 0
-        if request.form["username"] == myUsername and request.form["password"] == myPassword
+    if len(request.args) > 0:
+        if request.form["username"] == myUsername and request.form["password"] == myPassword:
             redirect(url_for(welcome))
             print("Redirected to /welcome from /login")
         error = "Wrong username or password"
@@ -44,11 +44,11 @@ def welcome():
 
 @app.route("/login")
 def authenticate():
-    if request.form["username"] == myUsername and request.form["password"] == myPassword
-    session['userC']=myUsername, session['passC']=myPassword
+    if request.form["username"] == myUsername and request.form["password"] == myPassword:
+        session['logged?'] = 't'
         render_template("welcome.html",
                         username = myUsername)
-    else
+    else:
         return render_template("response.html",
                             teamName = teamName,
                             teamMembers = teamMembers,
