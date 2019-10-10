@@ -18,12 +18,16 @@ c.execute("CREATE TABLE IF NOT EXISTS courses(code text, mark integer, id intege
 # test SQL stmt in sqlite3 shell, save as string
 
 # < < < INSERT YOUR POPULATE-THE-DB CODE HERE > > >
+throwaway=False
 with open('courses.csv') as csvfile:
      reader = csv.reader(csvfile, delimiter=',')
      for row in reader:
-         #print(row)
-         command = "INSERT INTO courses VALUES ('"+row[0]+"','"+row[1]+"','"+row[2]+"')"
-         c.execute(command)
+         if throwaway:
+                  #print(row)
+                  command = "INSERT INTO courses VALUES ('"+row[0]+"','"+row[1]+"','"+row[2]+"')"
+                  c.execute(command)
+         else:
+                  throwaway=True
 
 #==========================================================
 
