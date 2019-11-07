@@ -33,11 +33,15 @@ with open('courses.csv') as csvfile:
 
 c.execute("CREATE TABLE IF NOT EXISTS students (name TEXT, age INTEGER, id INTEGER)")
 
+throwaway=False
 with open('students.csv') as csvfile:
      reader = csv.reader(csvfile)
      for row in reader:
-         command = "INSERT INTO courses VALUES ('"+row[0]+"','"+row[1]+"','"+row[2]+"')"
-         c.execute(command)
+        if throwaway:
+            command = "INSERT INTO students VALUES ('"+row[0]+"','"+row[1]+"','"+row[2]+"')"
+            c.execute(command)
+        else:
+            throwaway = True
 
 #==========================================================
 
