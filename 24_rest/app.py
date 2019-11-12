@@ -6,7 +6,7 @@
 #Key: qel64kzuxUAJzn4Jb40ZL8o5PRS9BGfhbPaYH2Np
 #https://api.nasa.gov/planetary/apod?api_key=qel64kzuxUAJzn4Jb40ZL8o5PRS9BGfhbPaYH2Np
 
-from flask import Flask render_template
+from flask import Flask, render_template
 import json, urllib2
 app = Flask(__name__)
 
@@ -19,4 +19,4 @@ def root():
 
 if __name__ == "__main__":
     app.debug = True
-    app.run()
+    app.run(host='0.0.0.0')
