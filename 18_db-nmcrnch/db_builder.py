@@ -22,7 +22,7 @@ throwaway=False
 with open('courses.csv') as csvfile:
      reader = csv.reader(csvfile, delimiter=',')
      for row in reader:
-         if throwaway:
+         if throwaway: 
                   #print(row)
                   command = "INSERT INTO courses VALUES ('"+row[0]+"','"+row[1]+"','"+row[2]+"')"
                   c.execute(command)
