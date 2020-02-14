@@ -46,11 +46,12 @@ var animate2 = function(){
   ctx.clearRect(0,0,c.width,c.height);
   x += 3*xFact; y += 3*yFact;
   ctx.drawImage(logo,x,y,100,70);
-  if(x==0 || x==500){
-    xFact *= -1;
+  console.log(x+", "+y);
+  if(x<=0 || x>=500){
+    xFact = -1*xFact;
   }
-  if(y==0 || y==530){
-    yFact *= -1;
+  if(y<=0 || y>=530){
+    yFact = -1*yFact;
   }
   id=window.requestAnimationFrame(animate2);
 }
@@ -69,8 +70,8 @@ var draw = function(){
 }
 var draw2 = function(){
   init();
-  x = Math.random()*600;
-  y = Math.random()*600;
+  x = Math.random()*400 + 100;
+  y = Math.random()*400 + 100;
   xFact = 1;
   yFact = 1;
   animate2();
