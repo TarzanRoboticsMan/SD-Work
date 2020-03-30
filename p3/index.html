@@ -1,0 +1,108 @@
+d>
+    <meta charset="UTF-8">
+        <title>CSS</title>
+	    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+			              integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	        <style>
+    p{
+	          padding: 1px
+			      }
+        title{
+
+		    }
+	    </style>
+	    </head>
+	    <div class = "container">
+		      <br>
+		        <br>
+			<h3 dir="ltr">
+				    The Physics of CSS
+			</h3>
+			<p dir="ltr">
+			    CSS is essentially mapping HTML elements to rectangular boxes that can be
+			        positioned on the x-, y- and z-axis.
+			</p>
+			<p dir="ltr">
+			    There is a single place these HTML elements usually live in: the normal
+			        flow. Elements in the normal flow are born as inline, block elements, or
+				    not displayed. Not displayed elements are those like meta tags or style
+				        tags which aren’t visually rendered by the browser. However, HTML elements
+					    can also be born outside of the normal flow, and interact with the normal
+					        flow in their own way: like floats, relative elements, and fixed elements.
+						    Let’s take a look at inline and block elements.
+			</p>
+			<h3>
+				    Inline vs. Block
+			</h3>
+			<p dir="ltr">
+			    Every HTML element has three different states: Block, Inline or not
+			        displayed.
+			</p>
+			<p dir="ltr">
+			    A block level element will naturally span the entire available width,
+			        without concern about how much horizontal space it actually needs. As a
+				    result of that, a block level element will automatically push following
+				        content to a new line, so by default, two block level elements can't stand
+					    next to each other - the first will push the second one to the next line
+					        (floating elements will allow this though, but more on that later).
+			</p>
+			<p dir="ltr">
+			    However, an inline element does not break the current flow. An inline
+			        element only takes up the space it needs to render its content and after
+				    that, more inline elements can be displayed.
+			</p>
+			<p dir="ltr">
+			    A good way to remember the difference is to think of an inline element as a
+			        line of text/sentence and a block level element as a paragraph - the
+				    sentence can stand together with other sentences to form an entire
+				        paragraph, but the paragraph breaks the natural flow to create space around
+					    it.
+			</p>
+			<p dir="ltr">
+			    <img
+              src="https://lh3.googleusercontent.com/Ic0_t6-hwLeU7qPLkYHy5sXOj-6XI8oSxt2cc5alpd1JalPfaYPt7T6Q9EkjAJUmrht4QKkhjU1_VE_1ML38JMS22gTSgPgpZ2UShN8XuRKbDxQjyTJFxq9i9ENPR5Fije3xHja1"
+	              width="624"
+	               height="83"
+		    />
+			</p>
+			<p dir="ltr">
+			    An example of inline elements include span tags (the generic inline
+			        element), links (anchors), images and form fields like input. Common block
+				    level elements include div tags (the generic block level element), header
+				        tags (h1-h6), paragraphs, lists and tables.
+			</p>
+			<p dir="ltr">
+			    Another important fact is that width and height properties are ignored for
+			        inline elements. Instead, you can use the line-height property to make an
+				    inline element smaller or bigger, as the space between each line grows or
+				        shrinks.
+			</p>
+			<p dir="ltr">
+			    You will also see margins and paddings acting differently than you might be
+			        used to, when applied to inline elements. In general, if you need to create
+				    space between or inside elements, you may want to use a block level element
+				        instead. If you're trying to use inline elements because you want two or
+					    more elements to stand next to each other, then a floating block level
+					        element might be more suitable.
+			</p>
+			<h3 dir="ltr">
+				    Outline vs. Borders
+			</h3>
+			<p dir="ltr">
+			    While most HTML elements don't have a border by default, CSS does support
+			        the feature, with a range of border related properties.
+			</p>
+			<h5 dir="ltr">
+				    Border color
+			</h5>
+			<p dir="ltr">
+			    As per usual.
+			</p>
+			<h5 dir="ltr">
+				    Border width
+			</h5>
+			<p dir="ltr">
+			    The width can be either an absolute value, a relative value, or one of the
+			        pre-defined border width values: Thin, medium or thick. If you use the
+				    pre-defined values, it's up to the browser to interpret them, which
+				        basically gives you less control of how yo
