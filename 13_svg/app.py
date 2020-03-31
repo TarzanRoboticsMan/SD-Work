@@ -5,6 +5,7 @@ app = Flask(__name__) #create instance of class Flask
 @app.route('/')
 def hello_word():
     print(__name__)
+    return render_template("index.html")
     
 if __name__ == "__main__":
     app.debug = True
