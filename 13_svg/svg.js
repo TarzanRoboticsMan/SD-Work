@@ -16,7 +16,7 @@ var draw = function(e) {
     c.setAttribute("cy", y);
     c.setAttribute("r", 10);
     c.setAttribute("fill", "blue");
-    c.setAttribute("stroke", "black");
+    //c.setAttribute("stroke", "black");
     c.addEventListener('click', changeCircle); // add fxn
     pic.appendChild(c);
   }
